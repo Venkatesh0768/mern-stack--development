@@ -1,0 +1,45 @@
+/* styles.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #222;
+    border: 2px solid #fff;
+}
+
+.paddle {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: #fff;
+}
+
+.user-paddle {
+    left: 0;
+    top: 150px;
+}
+
+.ai-paddle {
+    right: 0;
+    top: 150px;
+}
+
+.ball {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 292.5px; /* Center */
+    top: 192.5px; /* Center */
+}
