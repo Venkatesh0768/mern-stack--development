@@ -1,22 +1,30 @@
-//callback
-function VenkyASyncFunction(callback){
-    callback("Hi There")
+//Callback Example
+function myDisplay(value) {
+  console.log(value);
 }
 
-let promise = new Promise(function(){
-    alert("Hello This is Promise")
-    resolve(56)
-})
-
-setTimeout(function(){
-    console.log("Helllo World")
-}, 2000)
-
-async function main() {
-    VenkyASyncFunction(function(value){
-        console.log(value)
-    })
+function sumOftheTwoNumber(num1, num2, myDisplay) {
+  let result = num1 + num2;
+  myDisplay(result);
 }
 
-console.log(promise)
-main();
+sumOftheTwoNumber(5, 1, myDisplay);
+
+//promises
+
+let myPromise = new Promise(function (myResolve, myReject) {
+  myResolve(); // when successful
+  myReject(); // when error
+});
+
+myPromise.then(
+  function (value) {
+    console.log("Sucessful");
+    
+    /* code if successful */
+  },
+  function (error) {
+    console.log("Sucessful");
+    /* code if some error */
+  }
+);
